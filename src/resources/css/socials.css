@@ -1,0 +1,41 @@
+html, body {
+  height: 100%;
+  background-color: #2980b9;
+  text-align: center;
+}
+
+h1 {
+  color: #ecf0f1;
+}
+
+#discord {
+  color: #7289DA;
+}
+
+#twitter {
+  color: #1da1f2;
+}
+
+#reddit {
+  color: #ff4500;
+}
+
+#spotify {
+  color: #1ed760;
+}
+
+#lastfm {
+  color: #ba0000;
+}
+
+#github {
+  color: #24292e;
+}
+
+#roblox {
+  color: #e1221a;
+}
+
+#onlyfans {
+  color: #00b1f0;
+}

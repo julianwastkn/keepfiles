@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>KeepFiles</title>
+    <link rel="stylesheet" href="/resources/css/bootstrap.min.css">
+    <link rel="icon" type="image/png" href="/resources/png/keepfiles.png">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;display=swap">
+</head>
+
+<body>
+    <script>
+        $.ajax({
+            url: "/api/stats",
+            method: "GET",
+            success: function (res) {
+                console.log(res)
+                const { FilesCount, LinksCount } = res;
+                console.log(FilesCount)
+                $("#file-count").html(FilesCount);
+                $("#link-count").html(LinksCount);
+            }
+        })
+    </script>
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark navbar-custom">
+        <div class="container"><a class="navbar-brand" href="#">Keepfiles</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navbarResponsive"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Sign Up</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Log In</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="text-center text-white masthead">
+        <div class="masthead-content">
+            <div class="container">
+                <h1 class="masthead-heading mb-0">KeepFiles</h1>
+                <h2 class="masthead-subheading mb-0">Early Release</h2>
+            </div>
+        </div>
+        <div class="bg-circle-3 bg-circle"></div>
+        <div class="bg-circle-1 bg-circle"></div>
+        <div class="bg-circle-2 bg-circle"></div>
+        <div class="bg-circle-4 bg-circle"></div>
+    </header>
+    <section>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="p-5"><img class="rounded-circle img-fluid" src="/resources/png/keepfiles.png" style="border-radius: 50px !important;"></div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="p-5">
+                        <h2 class="display-4">What KeepFiles Does</h2>
+                        <p>KeepFiles is a file host and link shortener that empowers server hosts to tightly manage users, administrators, and their site in general. I built the site with the idea that this could grow into something that really has everything you need in one convenient spot. For now, I would say it's a great utility - but there's always room for improvements! Be sure to reach out about any features that you think would make this tool even cooler.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-1">
+                    <div class="p-5"><img class="rounded-circle img-fluid" src="/resources/png/fauxcode.png" style="border-radius: 50px !important;"></div>
+                </div>
+                <div class="col-lg-6 order-lg-2">
+                    <div class="p-5">
+                        <h2 class="display-4">User Friendly APIs</h2>
+                        <p>APIs can be scary, but rest assured, they don't bite! I made them super easy to use, especially when integrating with applications like <a href="https://getsharex.com"><strong>ShareX</strong></a>. You can find all of our documentation, including pre-made SXCU files, on our <a href="https://github.com/julianwastkn/keepfiles"><strong>GitHub</strong></a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="p-5"><img class="rounded-circle img-fluid" src="/resources/svg/github-mark.svg" style="border-radius: 50px !important;" width="420" height="411"></div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <div class="p-5">
+                        <h2 class="display-4">Open Source,<br>The Good &amp; The Bad</h2>
+                        <p>I set out to build something useful for people that they could learn from, contribute to, and utilize in their day-to-day. This type of service is something I really desired before I knew how to program. I feel like I'm on a path to success with that original mission, and while I'm really happy about it, it does have a downside.<br><br>Because of the nature of this project, there is no financial backing. I can't afford to host the service for everyone, but you can find detailed documentation on how to get it going yourself. Check out our <a href="https://github.com/julianwastkn/keepfiles"><strong>GitHub</strong></a>&nbsp;to learn more about the status of the project, and how you can host your own instance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="py-5 bg-dark">
+        <div class="container" style="text-align: center;">
+            <h2 class="masthead-subheading mb-0" style="color: rgba(255, 255, 255, 0.55);">Keeping <span id="file-count">0</span> Files &amp; Shortening <span id="link-count">0</span> Links</h2>
+        </div>
+    </footer>
+    <script src="/resources/js/bootstrap.min.js"></script>
+</body>
+
+</html>
