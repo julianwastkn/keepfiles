@@ -21,4 +21,4 @@ app.use('', routes);
 
 app.listen(port, host);
 
-// console.log(`Listening on http://${host}:${port}`);
+console.log(`Listening on http://${host}:${port}`);
