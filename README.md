@@ -5,7 +5,7 @@ KeepFiles is a file host and link shortener that empowers server hosts to effect
 # Release Notes
 This is an **extremely** early release. There is essentially no front-end functionality at this point. The APIs are in place for it to happen, but, it is not quite ready yet.
 
-By **May 1st**,  the following will be implemented:
+I've ran into delays because of life, but the following will be implemented ASAP:
 * Users will be able to sign up & log in through the website.
 * Users will be able to view their links and files through the website.
 * Users will be able to explicitly request API keys.
